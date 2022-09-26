@@ -10,4 +10,9 @@ ML Model Deployment
 4. [GitCli](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 
 
-Create A New Environment
+Create a New Environment
+```
+conda create -p venv python==3.10.0 -y
+```
+
+Create a requirements.txt file
