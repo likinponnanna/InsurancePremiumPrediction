@@ -7,6 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="login">
+        <h1>Insurance Premium Prediction</h1><br>
+        <h2>Categorical Variable details</h2>
+        <p><b>Sex </b>Male:1,Female:0</p>
+        <p><b>Smoker </b>Yes:1,No:0</p>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+          <input type="text" name="Age" placeholder="Age" required="required" /><br>
+            <input type="text" name="Sex" placeholder="Sex" required="required" /><br>
+            <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+            <input type="text" name="Children" placeholder="Children" required="required" /><br>
+            <input type="text" name="Smoker" placeholder="Smoker" required="required" /><br>
+            <input type="text" name="region_northwest" placeholder="region_northwest" required="required" /><br>
+            <input type="text" name="region_southeast" placeholder="region_southeast" required="required" /><br>
+            <input type="text" name="region_southwest" placeholder="region_southwest" required="required" /><br>
+            
+    
+           
+    
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       
+     </div>
+     {{prediction_text}}
 </body>
 </html>
